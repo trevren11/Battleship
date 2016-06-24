@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/battleship"
+
+id = ARGV.first if ARGV.size == 1
+bs = nil
+
+if id
+    bs = Battleship.new(id)
+else
+    bs = Battleship.new()
+end
+
+bs.play
